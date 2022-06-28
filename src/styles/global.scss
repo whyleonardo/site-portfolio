@@ -1,0 +1,98 @@
+// RESETS
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+
+// GENERAL VARIABLES
+
+$border_radius: 1rem;
+$text_shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+$small_text_shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+
+
+// COLORS
+
+$brand_color_purple: #323299;
+$brand_color_lightpurple: #7D7DE3;
+$brand_color_black: #121214;
+$brand_color_jet: #27272B;
+$brand_color_jetlight: #2B2727;
+$brand_color_white: #FAFAFF;
+
+// FONTS 
+
+$brand_text_font: 'Montserrat',
+sans-serif;
+$brand_code_font: 'Roboto Mono',
+monospace;
+
+$brand_title_size: 5rem;
+$brand_subtitle_size: 2.5rem;
+$brand_font_size: 1rem;
+
+
+// ROOT CONFIGS
+
+body {
+  font-size: 1.6rem;
+  font-family: $brand_text_font;
+
+}
+
+:root {
+  font-size: 62.5%
+}
+
+// PARAGRAPHS & TITLE
+
+p,
+span,
+strong,
+small {
+  font-family: $brand_text_font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $brand_text_font;
+}
+
+
+// CONTAINER 
+
+.container {
+  width: 100%;
+}
+
+.divider {
+  height: 1px;
+  position: relative;
+  width: 100%;
+  background: radial-gradient(ellipse farthest-side at top center, red, transparent);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, $brand_color_jet, $brand_color_lightpurple, $brand_color_purple, $brand_color_black);
+  }
+}

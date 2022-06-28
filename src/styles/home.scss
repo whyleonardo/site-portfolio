@@ -1,0 +1,299 @@
+@import '../styles/global.scss';
+
+
+@keyframes click {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes entrance-title {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+
+  }
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  padding-top: 12rem;
+  padding-inline: 2rem;
+  // padding-inline: 15rem;
+
+  background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
+  position: relative;
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    // align-items: center;
+
+    h1 {
+      font-size: $brand_title_size;
+      color: $brand_color_lightpurple;
+      text-shadow: $text_shadow;
+      text-align: center;
+      transition: 1s;
+      animation: entrance-title 1.8s ease-out;
+
+      &::after {
+        content: "|";
+        margin-left: .5rem;
+        animation: click infinite .7s;
+        transition: 1s;
+      }
+    }
+
+    h3 {
+      color: $brand_color_white;
+      font-size: $brand_subtitle_size;
+      text-shadow: $text_shadow;
+      text-align: center;
+
+    }
+
+    .image {
+
+      fill: $brand_color_lightpurple;
+      stroke: $brand_color_lightpurple;
+
+      svg {
+        width: 100%;
+        transition: 1s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .st0 {
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        fill: none;
+        stroke-width: 2;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    }
+
+  }
+
+}
+
+// MEDIA QUERIES 
+
+@media (min-width: 1200px) {
+
+  #home {
+    background: linear-gradient(63.13deg, $brand_color_jet 51.04%, $brand_color_black 51.05%);
+
+    .main-wrapper {
+      padding-inline: 15rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      h1,
+      h3 {
+        text-align: start;
+      }
+
+
+    }
+  }
+}
+
+#about {
+  height: 100vh;
+  background-color: rgba($brand_color_jet, .900);
+}
+
+// ANIMATIONS ================
+
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 28px;
+    stroke-dasharray: 28px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 28px;
+  }
+}
+
+.svg-elem-1 {
+  animation: animate-svg-stroke-1 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
+    animate-svg-fill-1 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 8.337874412536621px;
+    stroke-dasharray: 8.337874412536621px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 8.337874412536621px;
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: $brand_color_lightpurple;
+
+  }
+}
+
+.svg-elem-2 {
+  animation: animate-svg-stroke-2 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
+    animate-svg-fill-2 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s both;
+}
+
+@keyframes animate-svg-stroke-3 {
+  0% {
+    stroke-dashoffset: 8.286514282226562px;
+    stroke-dasharray: 8.286514282226562px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 8.286514282226562px;
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: $brand_color_lightpurple;
+
+  }
+}
+
+.svg-elem-3 {
+  animation: animate-svg-stroke-3 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both,
+    animate-svg-fill-3 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+}
+
+@keyframes animate-svg-stroke-4 {
+  0% {
+    stroke-dashoffset: 8.285686492919922px;
+    stroke-dasharray: 8.285686492919922px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 8.285686492919922px;
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: $brand_color_lightpurple;
+
+  }
+}
+
+.svg-elem-4 {
+  animation: animate-svg-stroke-4 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s both,
+    animate-svg-fill-4 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.1s both;
+}
+
+@keyframes animate-svg-stroke-5 {
+  0% {
+    stroke-dashoffset: 94.56021118164062px;
+    stroke-dasharray: 94.56021118164062px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 94.56021118164062px;
+  }
+}
+
+.svg-elem-5 {
+  animation: animate-svg-stroke-5 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s both,
+    animate-svg-fill-5 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2000000000000002s both;
+}
+
+@keyframes animate-svg-stroke-6 {
+  0% {
+    stroke-dashoffset: 10.485280990600586px;
+    stroke-dasharray: 10.485280990600586px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 10.485280990600586px;
+  }
+}
+
+.svg-elem-6 {
+  animation: animate-svg-stroke-6 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both,
+    animate-svg-fill-6 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.3s both;
+}
+
+@keyframes animate-svg-stroke-7 {
+  0% {
+    stroke-dashoffset: 10.485280990600586px;
+    stroke-dasharray: 10.485280990600586px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 10.485280990600586px;
+  }
+}
+
+.svg-elem-7 {
+  animation: animate-svg-stroke-7 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s both,
+    animate-svg-fill-7 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4000000000000001s both;
+}
+
+@keyframes animate-svg-stroke-8 {
+  0% {
+    stroke-dashoffset: 10.9442720413208px;
+    stroke-dasharray: 10.9442720413208px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 10.9442720413208px;
+  }
+}
+
+.svg-elem-8 {
+  animation: animate-svg-stroke-8 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s both,
+    animate-svg-fill-8 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s both;
+}
