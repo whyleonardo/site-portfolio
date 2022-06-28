@@ -7,7 +7,6 @@ header {
 
   padding-inline: 3rem;
 
-  background: $brand_color_lightpurple;
   background: linear-gradient(90deg, rgba($brand_color_lightpurple, 1) 0%, rgba($brand_color_purple, 1) 100%);
   border-bottom: solid 2px rgba($brand_color_purple, 0.7);
   width: 100%;
@@ -47,36 +46,6 @@ header {
   nav {
     display: flex;
     justify-content: space-between;
-
-    ul {
-      display: flex;
-      gap: 1rem;
-
-      li {
-        padding-block: 2rem;
-        border-radius: $border_radius;
-        background-color: transparent;
-        transition: .5s;
-
-        &:hover {
-          background-color: transparentize($color: $brand_color_lightpurple, $amount: .5);
-          filter: brightness(1.1);
-        }
-
-        a {
-          text-shadow: $small_text_shadow;
-
-          padding: 1rem;
-          letter-spacing: -0.025rem;
-          border-radius: $border_radius;
-          color: $brand_color_white;
-          transition: .5s;
-          text-transform: uppercase;
-        }
-      }
-
-    }
-
   }
 
 }
@@ -99,6 +68,62 @@ header.scroll {
   }
 }
 
+.menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba($brand_color_lightpurple, 1) 0%, rgba($brand_color_purple, 1) 100%);
+  display: none;
+
+
+
+  .menu-list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: grid;
+      gap: 4rem;
+
+      li {
+        padding-block: 2rem;
+        border-radius: $border_radius;
+        background-color: transparent;
+        transition: .5s;
+        text-align: center;
+        font-size: x-large;
+
+        &:hover {
+          background-color: transparentize($color: $brand_color_lightpurple, $amount: .5);
+          filter: brightness(1.1);
+        }
+
+        a {
+          text-shadow: $small_text_shadow;
+
+          padding: 1rem;
+          letter-spacing: -0.025rem;
+          border-radius: $border_radius;
+          color: $brand_color_white;
+          transition: .5s;
+          text-transform: uppercase;
+        }
+      }
+
+    }
+  }
+}
+
+.menu-active {
+  display: block;
+}
+
 // MEDIA QUERIES 
 
 @media (min-width: 1200px) {
@@ -109,22 +134,4 @@ header.scroll {
     nav {}
   }
 
-
 }
-
-//   <ul> //   <li>
-//     <a href="#home">Inicío</a>
-//   </li>
-//   <li>
-//     <a href="#about">Sobre Mim</a>
-//   </li>
-//   <li>
-//     <a href="#projects">Meus Projetos</a>
-//   </li>
-//   <li>
-//     <a href="#skills">Skills</a>
-//   </li>
-//   <li>
-//     <a href="#contact">Contato</a>
-//   </li>
-// </ul>
