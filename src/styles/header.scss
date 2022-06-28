@@ -1,5 +1,29 @@
 @import '../styles/global.scss';
 
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -99,6 +123,7 @@ header.scroll {
         text-align: center;
         font-size: x-large;
 
+
         &:hover {
           background-color: transparentize($color: $brand_color_lightpurple, $amount: .5);
           filter: brightness(1.1);
@@ -122,6 +147,20 @@ header.scroll {
 
 .menu-active {
   display: block;
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  .menu-list {
+    ul {
+      animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+  }
+}
+
+.menu-active+.hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
 }
 
 // MEDIA QUERIES 
