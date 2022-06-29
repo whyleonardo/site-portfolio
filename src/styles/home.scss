@@ -27,8 +27,9 @@
 }
 
 #home {
-  height: 100vh;
-  padding-block: 8rem;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(8rem, 10rem, 13rem);
   padding-inline: 2rem;
 
   background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
@@ -37,12 +38,13 @@
   .main-wrapper {
     display: flex;
     flex-direction: column-reverse;
-    // align-items: center;
+    align-items: center;
 
     h1 {
       font-size: $brand_title_size;
-      color: $brand_color_lightpurple;
+      color: $brand_color_secondary;
       text-shadow: $text_shadow;
+      line-height: 4.9rem;
       text-align: center;
       transition: 1s;
       animation: entrance-title 1.8s ease-out;
@@ -61,15 +63,19 @@
       text-shadow: $text_shadow;
       text-align: center;
 
+      span {
+        display: block;
+      }
+
     }
 
     .image {
 
-      fill: $brand_color_lightpurple;
-      stroke: $brand_color_lightpurple;
+      fill: $brand_color_secondary;
+      stroke: $brand_color_secondary;
 
       svg {
-        width: 100%;
+        width: 30rem;
         transition: 1s;
 
         &:hover {
@@ -115,15 +121,10 @@
         text-align: start;
       }
 
-
     }
   }
 }
 
-#about {
-  height: 100vh;
-  background-color: rgba($brand_color_jet, .900);
-}
 
 // ANIMATIONS ================
 
@@ -162,7 +163,7 @@
   }
 
   100% {
-    fill: $brand_color_lightpurple;
+    fill: $brand_color_secondary;
 
   }
 }
@@ -190,7 +191,7 @@
   }
 
   100% {
-    fill: $brand_color_lightpurple;
+    fill: $brand_color_secondary;
 
   }
 }
@@ -218,7 +219,7 @@
   }
 
   100% {
-    fill: $brand_color_lightpurple;
+    fill: $brand_color_secondary;
 
   }
 }

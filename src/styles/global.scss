@@ -24,8 +24,8 @@ $small_text_shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 
 // COLORS
 
-$brand_color_purple: #323299;
-$brand_color_lightpurple: #7D7DE3;
+$brand_color_primary: #323299;
+$brand_color_secondary: #7D7DE3;
 $brand_color_black: #121214;
 $brand_color_jet: #27272B;
 $brand_color_jetlight: #2B2727;
@@ -93,6 +93,6 @@ h5 {
     right: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(to right, $brand_color_jet, $brand_color_lightpurple, $brand_color_purple, $brand_color_black);
+    background: linear-gradient(to right, $brand_color_jet, $brand_color_secondary, $brand_color_primary, $brand_color_black);
   }
 }
