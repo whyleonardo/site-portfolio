@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   text-decoration: none;
   list-style: none;
   -webkit-font-smoothing: antialiased;
@@ -13,7 +12,6 @@
 html.sr .load-hidden {
   visibility: hidden;
 }
-
 
 // GENERAL VARIABLES
 
@@ -31,33 +29,36 @@ $brand_color_jet: #27272B;
 $brand_color_jetlight: #2B2727;
 $brand_color_white: #FAFAFF;
 
-// FONTS 
+// FONT CONFIGS
 
 $brand_text_font: 'Montserrat',
 sans-serif;
 $brand_code_font: 'Roboto Mono',
 monospace;
 
-$brand_title_size: 5rem;
-$brand_subtitle_size: 2.5rem;
-$brand_font_size: 1rem;
+// FONT SIZES
 
+$brand_h1_size: 5rem;
+$brand_title_size: 3.5rem;
+$brand_subtitle_size: 2.5rem;
+$brand_paragraph_size: 1.7rem;
 
 // ROOT CONFIGS
+:root {
+  font-size: 62.5%;
+}
 
 body {
   font-size: 1.6rem;
   font-family: $brand_text_font;
-
-}
-
-:root {
-  font-size: 62.5%
+  scroll-behavior: smooth;
 }
 
 // PARAGRAPHS & TITLE
 
 p,
+a,
+button,
 span,
 strong,
 small {
@@ -94,5 +95,39 @@ h5 {
     left: 0;
     height: 3px;
     background: linear-gradient(to right, $brand_color_jet, $brand_color_secondary, $brand_color_primary, $brand_color_black);
+  }
+}
+
+
+// MIXINS
+
+@mixin title-style {
+  color: $brand_color_secondary;
+  text-shadow: $text_shadow;
+  font-size: $brand_title_size;
+}
+
+@mixin paragraph-style {
+  color: $brand_color_white;
+  font-size: $brand_paragraph_size;
+}
+
+@mixin flex-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-style {
+  border-radius: $border_radius;
+  background-color: $brand_color_primary;
+  padding: 1.5rem;
+  color: $brand_color_white;
+  cursor: pointer;
+  border: none;
+  transition: all .4s;
+
+  &:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
   }
 }

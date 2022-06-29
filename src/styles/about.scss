@@ -3,31 +3,28 @@
 #about {
   display: flex;
   justify-content: center;
-  padding-block: clamp(6rem, 8rem, 13rem);
+  padding-block: clamp(2rem, 3rem, 4rem);
   background-color: rgba($brand_color_jet, .900);
 
   .about-wrapper {
-    display: flex;
+    @include flex-wrapper;
     flex-direction: column;
-    padding: 2rem;
-    align-items: center;
     gap: 2rem;
+    padding-inline: 2rem;
 
     img {
       width: 30rem;
     }
 
     h2 {
-      color: $brand_color_secondary;
+      @include title-style;
       text-align: center;
-      font-size: 3.5rem;
       text-transform: uppercase;
     }
 
     p {
-      color: $brand_color_white;
+      @include paragraph-style;
       text-align: center;
-      font-size: 1.8rem;
     }
 
   }

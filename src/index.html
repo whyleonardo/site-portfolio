@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/js/scroll.js"></script>
 
     <!-- HAMBURGUER -->
     <link rel="stylesheet" href="/styles/hamburguer.scss" />
@@ -37,10 +38,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quando&family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="/js/scroll.js"></script>
     <title>Meu Portfólio</title>
   </head>
-  <body onscroll="headerBlur()">
+  <body onscroll="removeHeader()">
     <div class="container">
       <header id="header">
         <div class="logo">
@@ -117,7 +117,7 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
         </nav>
       </header>
       <main id="home">
-        <div class="main-wrapper">
+        <div class="home-wrapper">
           <div>
             <h3>Olá, eu sou</h3>
             <h1>Christian Leonardo.</h1>
@@ -208,7 +208,7 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
             aliquam consectetur assumenda blanditiis laboriosam officiis facere
             libero cupiditate quos earum similique.
           </p>
-          <p>
+          <p class="paragraph_2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             pariatur ea consequatur et rem repudiandae minima illum, sint
             aliquam consectetur assumenda blanditiis laboriosam officiis facere
@@ -217,26 +217,46 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
         </div>
       </section>
       <div class="divider"></div>
-      <!-- <section id="projects">
+      <section id="projects">
         <div class="projects-wrapper">
-          <img src="./assets/man_coding.svg" alt="man coding" />
-          <h2>Sobre mim</h2>
+          <h2>Projetos</h2>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            pariatur ea consequatur et rem repudiandae minima illum, sint
-            aliquam consectetur assumenda blanditiis laboriosam officiis facere
-            libero cupiditate quos earum similique.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            pariatur ea consequatur et rem repudiandae minima illum, sint
-            aliquam consectetur assumenda blanditiis laboriosam officiis facere
-            libero cupiditate quos earum similique.
-          </p>
+          <div class="project-cards">
+            <div class="card">
+              <div><p>Em breve</p></div>
+            </div>
+            <div class="card">
+              <div><p>Em breve</p></div>
+            </div>
+            <div class="card">
+              <div><p>Em breve</p></div>
+            </div>
+            <div class="card hidden">
+              <div><p>Em breve</p></div>
+            </div>
+            <div class="card hidden">
+              <div><p>Em breve</p></div>
+            </div>
+            <div class="card hidden">
+              <div><p>Em breve</p></div>
+            </div>
+          </div>
+
+          <div class="button-wrap">
+            <button onclick="expandCards()" class="expand-projects">
+              Ver mais
+            </button>
+
+            <a
+              target="_blank"
+              href="https://github.com/whyleonardo?tab=repositories"
+              >Repositórios GitHub</a
+            >
+          </div>
         </div>
-      </section> -->
+      </section>
     </div>
     <script src="/js/main.js"></script>
+    <script src="/js/skills.js"></script>
   </body>
 </html>

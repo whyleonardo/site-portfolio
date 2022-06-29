@@ -31,23 +31,22 @@
   align-items: center;
   padding-block: clamp(8rem, 10rem, 13rem);
   padding-inline: 2rem;
-
   background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
-  position: relative;
+  // position: relative;
 
-  .main-wrapper {
-    display: flex;
+  .home-wrapper {
+    @include flex-wrapper;
     flex-direction: column-reverse;
-    align-items: center;
 
     h1 {
-      font-size: $brand_title_size;
-      color: $brand_color_secondary;
-      text-shadow: $text_shadow;
+      @include title-style;
+      font-size: $brand_h1_size;
+
       line-height: 4.9rem;
       text-align: center;
       transition: 1s;
       animation: entrance-title 1.8s ease-out;
+
 
       &::after {
         content: "|";
@@ -70,7 +69,6 @@
     }
 
     .image {
-
       fill: $brand_color_secondary;
       stroke: $brand_color_secondary;
 
@@ -110,7 +108,7 @@
   #home {
     background: linear-gradient(63.13deg, $brand_color_jet 51.04%, $brand_color_black 51.05%);
 
-    .main-wrapper {
+    .home-wrapper {
       padding-inline: 15rem;
       flex-direction: row;
       justify-content: space-between;

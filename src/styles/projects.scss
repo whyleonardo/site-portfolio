@@ -1,1 +1,90 @@
 @import '../styles/global.scss';
+
+
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: clamp(2rem, 3rem, 4rem);
+  background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
+
+  .projects-wrapper {
+    @include flex-wrapper;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    h2 {
+      @include title-style;
+      text-transform: uppercase;
+    }
+
+
+    .project-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 2rem;
+        background-color: $brand_color_jet;
+        transition: .5s;
+        width: 31rem;
+        height: 19.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: transparent;
+          transform: scale(1.1);
+          backdrop-filter: blur(1000px);
+          border: 1px solid rgba($brand_color_jet, 1);
+
+          p {
+            letter-spacing: .5rem;
+
+          }
+        }
+
+        div {
+          padding-block: 1.5rem;
+          background-color: $brand_color_primary;
+          width: 400rem;
+
+          p {
+            color: $brand_color_white;
+            text-transform: uppercase;
+            text-align: center;
+            transition: .5s;
+
+          }
+        }
+      }
+    }
+
+    .card.hidden {
+      display: none;
+    }
+
+
+    .button-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .expand-projects {
+        @include button-style;
+        text-transform: uppercase;
+      }
+
+      a {
+        @include button-style;
+      }
+    }
+  }
+
+}
