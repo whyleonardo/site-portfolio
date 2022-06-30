@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/js/scroll.js"></script>
 
+    <script type="module" src="/js/scroll.js"></script>
     <!-- HAMBURGUER -->
     <link rel="stylesheet" href="/styles/hamburguer.scss" />
 
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/styles/skills.scss" />
 
     <!-- CONTACTS -->
-    <link rel="stylesheet" href="/styles/contacts.scss" />
+    <link rel="stylesheet" href="/styles/footer.scss" />
 
     <!-- ICONS -->
     <link rel="stylesheet" href="/./assets/icons/style.css" />
@@ -102,15 +102,12 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
                 <li>
                   <a href="#skills">Skills</a>
                 </li>
-                <li>
-                  <a href="#contact">Contato</a>
-                </li>
               </ul>
             </div>
           </div>
           <button
             onclick="openMenu()"
-            class="hamburger hamburger--slider"
+            class="hamburger remove hamburger--slider"
             type="button"
           >
             <span class="hamburger-box">
@@ -202,21 +199,25 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
       <div class="divider"></div>
       <section id="about">
         <div class="about-wrapper">
-          <img src="./assets/man_coding.svg" alt="man coding" />
-          <h2>Sobre mim</h2>
+          <div>
+            <img src="./assets/man_coding.svg" alt="man coding" />
+          </div>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            pariatur ea consequatur et rem repudiandae minima illum, sint
-            aliquam consectetur assumenda blanditiis laboriosam officiis facere
-            libero cupiditate quos earum similique.
-          </p>
-          <p class="paragraph_2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            pariatur ea consequatur et rem repudiandae minima illum, sint
-            aliquam consectetur assumenda blanditiis laboriosam officiis facere
-            libero cupiditate quos earum similique.
-          </p>
+          <div class="text">
+            <h2>Sobre mim</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              pariatur ea consequatur et rem repudiandae minima illum, sint
+              aliquam consectetur assumenda blanditiis laboriosam officiis
+              facere libero cupiditate quos earum similique.
+            </p>
+            <p class="paragraph_2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              pariatur ea consequatur et rem repudiandae minima illum, sint
+              aliquam consectetur assumenda blanditiis laboriosam officiis
+              facere libero cupiditate quos earum similique.
+            </p>
+          </div>
         </div>
       </section>
       <div class="divider"></div>
@@ -292,9 +293,78 @@ c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"
         </div>
       </section>
       <div class="divider"></div>
+      <footer>
+        <div class="footer-wrapper">
+          <div class="email">
+            <h2>Email:</h2>
+            <a href="mailto:christian.lsb16@gmail.com"
+              >christian.lsb16@gmail.com</a
+            >
+          </div>
+
+          <div class="icons-wrapper">
+            <a href="">
+              <i class="icon-linkedin"></i>
+            </a>
+            <a href="">
+              <i class="icon-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="sweetalert2.all.min.js"></script>
-    <script src="/js/main.js"></script>
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
+    <script>
+      const body = document.querySelector('body')
+      const header = document.getElementById('header')
+      const hamburguer = document.querySelector('.hamburger')
+      const menu = document.querySelector('.menu')
+      const cards = document.querySelectorAll('.card.hidden')
+      const expandButton = document.querySelector('.expand-projects')
+
+      const openMenu = () => {
+        hamburguer.classList.toggle('is-active')
+        menu.classList.toggle('menu-active')
+
+        if (menu.classList.contains('menu-active')) {
+          // Disable scroll
+          body.style.overflow = 'hidden'
+        } else {
+          // Enable scroll
+          body.style.overflow = 'auto'
+        }
+      }
+
+      const removeHeader = () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scroll')
+        } else {
+          header.classList.remove('scroll')
+        }
+      }
+
+      // Close menu when click on any item of menu list.
+      const links = document.querySelectorAll('.menu-list ul li a')
+      for (const link of links) {
+        link.addEventListener('click', () => {
+          menu.classList.remove('menu-active')
+          hamburguer.classList.remove('is-active')
+          body.style.overflow = 'auto'
+        })
+      }
+
+      // expand project cards
+      const expandCards = () => {
+        cards.forEach(card => {
+          card.classList.toggle('hidden')
+          if (card.classList.contains('hidden')) {
+            expandButton.textContent = 'Ver mais'
+          } else {
+            expandButton.textContent = 'Ver menos'
+          }
+        })
+      }
+    </script>
     <script type="module" src="/js/skills.js"></script>
   </body>
 </html>

@@ -13,6 +13,10 @@ html.sr .load-hidden {
   visibility: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // GENERAL VARIABLES
 
 $border_radius: 1rem;
@@ -51,7 +55,6 @@ $brand_paragraph_size: 1.7rem;
 body {
   font-size: 1.6rem;
   font-family: $brand_text_font;
-  scroll-behavior: smooth;
 }
 
 // PARAGRAPHS & TITLE
@@ -104,6 +107,7 @@ h5 {
 @mixin title-style {
   color: $brand_color_secondary;
   text-shadow: $text_shadow;
+  text-transform: uppercase;
   font-size: $brand_title_size;
 }
 

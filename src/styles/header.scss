@@ -163,12 +163,68 @@ header.scroll {
 
 // MEDIA QUERIES 
 
-@media (min-width: 1200px) {
-  header {
-    padding-inline: 15rem;
+@media (min-width: 575px) {}
 
+@media (min-width: 769px) {
 
-    nav {}
+  button.remove {
+    display: none !important;
   }
 
+  header.scroll {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    background: none;
+    position: unset;
+    height: auto;
+
+
+    .menu-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // height: 7rem;
+
+      ul {
+        display: flex;
+        gap: 3rem;
+
+        li {
+          padding-block: 2rem;
+          border-radius: $border_radius;
+          background-color: transparent;
+          transition: .5s;
+          text-align: center;
+          font-size: medium;
+
+
+          &:hover {
+            background-color: transparentize($color: $brand_color_secondary, $amount: .5);
+            filter: brightness(1.1);
+          }
+
+          a {
+            text-shadow: $small_text_shadow;
+
+            padding: 1rem;
+            letter-spacing: -0.025rem;
+            border-radius: $border_radius;
+            color: $brand_color_white;
+            transition: .5s;
+            text-transform: uppercase;
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+@media (min-width: 1280px) {
+  header {}
 }

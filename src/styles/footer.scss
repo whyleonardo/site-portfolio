@@ -1,0 +1,77 @@
+@import '../styles/global.scss';
+
+
+footer {
+  padding-block: clamp(1rem, 2rem, 3rem);
+  background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
+
+
+
+  .footer-wrapper {
+    @include flex-wrapper;
+    padding-block: 1rem;
+    padding-inline: 1rem 3rem;
+    justify-content: space-between;
+
+    .email {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      h2 {
+        @include title-style;
+        font-size: 2rem;
+      }
+
+      a {
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .icons-wrapper {
+      display: flex;
+      cursor: pointer;
+      gap: 2.5rem;
+
+      i {
+        display: block;
+        transform: scale(2);
+        color: $brand_color_white;
+        transition: color .7s;
+      }
+
+      i.icon-linkedin {
+        &:hover {
+          color: #0077b5;
+        }
+      }
+
+      i.icon-github {
+        &:hover {
+          color: #e34f26;
+        }
+      }
+    }
+  }
+
+}
+
+// MEDIA QUERIES 
+
+@media (min-width: 575px) {}
+
+@media (min-width: 769px) {}
+
+@media (min-width: 1280px) {
+  header {
+    padding-inline: 15rem;
+
+
+    nav {}
+  }
+
+}

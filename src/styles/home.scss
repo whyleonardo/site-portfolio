@@ -41,7 +41,7 @@
     h1 {
       @include title-style;
       font-size: $brand_h1_size;
-
+      text-transform: none;
       line-height: 4.9rem;
       text-align: center;
       transition: 1s;
@@ -103,13 +103,22 @@
 
 // MEDIA QUERIES 
 
-@media (min-width: 1200px) {
-
+@media (min-width: 575px) {
   #home {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  #home {
+    // display: flex;
+    height: 100vh;
     background: linear-gradient(63.13deg, $brand_color_jet 51.04%, $brand_color_black 51.05%);
 
     .home-wrapper {
-      padding-inline: 15rem;
+      display: flex;
+      padding-block: 8rem;
+      padding-inline: 10rem;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -117,12 +126,26 @@
       h1,
       h3 {
         text-align: start;
-      }
 
+
+      }
     }
   }
 }
 
+@media (min-width: 1000px) {
+  #home {
+    .home-wrapper {
+      h3 {
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {}
 
 // ANIMATIONS ================
 

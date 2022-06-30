@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding-block: clamp(4rem, 5rem, 6rem);
   padding-inline: 10rem;
   background-color: rgba($brand_color_jet, .900);
@@ -14,8 +14,6 @@
   h2 {
     @include title-style;
   }
-
-  .skill-description {}
 
   .skills-wrapper {
     // @include flex-wrapper;
@@ -31,7 +29,7 @@
       border-radius: 1rem;
       width: 12rem;
       height: 12rem;
-      background-color: $brand_color_white;
+      background-color: $brand_color_black;
       transition: ease-in-out .5s;
 
       cursor: pointer;
@@ -41,7 +39,7 @@
         ;
 
         i.icon-html {
-          color: #e34f26;
+          color: #f05032;
         }
 
         i.icon-css {
@@ -53,11 +51,11 @@
         }
 
         i.icon-react {
-          color: #38b2ac;
+          color: #61dafb;
         }
 
         i.icon-tailwindcss {
-          color: #61dafb;
+          color: #38b2ac;
         }
 
         i.icon-sass {
@@ -69,7 +67,7 @@
         }
 
         i.icon-git {
-          color: #f05032;
+          color: #e34f26;
         }
 
       }
@@ -77,11 +75,34 @@
       i {
         transform: scale(5);
         transition: color .7s;
-        color: $brand_color_jet;
+        color: $brand_color_secondary;
       }
     }
   }
 }
 
-// #0077b5
-// #1572b6
+// MEDIA QUERIES 
+
+@media (min-width: 660px) {
+
+  #skills {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    h2 {
+      @include title-style;
+    }
+
+    .skills-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+  }
+}
+
+@media (min-width: 769px) {}
+
+@media (min-width: 1280px) {}

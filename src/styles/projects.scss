@@ -17,7 +17,6 @@
 
     h2 {
       @include title-style;
-      text-transform: uppercase;
     }
 
 
@@ -40,7 +39,7 @@
 
         &:hover {
           background-color: transparent;
-          transform: scale(1.1);
+          transform: scale(1.05);
           backdrop-filter: blur(1000px);
           border: 1px solid rgba($brand_color_jet, 1);
 
@@ -88,3 +87,48 @@
   }
 
 }
+
+// MEDIA QUERIES 
+
+@media (min-width: 700px) {
+  #projects {
+    .projects-wrapper {
+      .project-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .card:nth-child(4) {
+          display: flex;
+        }
+
+        .card:nth-child(5) {
+          display: flex;
+        }
+
+        .card:nth-child(6) {
+          display: flex;
+        }
+      }
+
+      .button-wrap {
+        .expand-projects {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #projects {
+    .projects-wrapper {
+
+      .project-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {}
