@@ -1,1 +1,87 @@
 @import '../styles/global.scss';
+
+
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-block: clamp(4rem, 5rem, 6rem);
+  padding-inline: 10rem;
+  background-color: rgba($brand_color_jet, .900);
+
+  h2 {
+    @include title-style;
+  }
+
+  .skill-description {}
+
+  .skills-wrapper {
+    // @include flex-wrapper;
+    justify-content: center;
+    display: grid;
+    gap: 3rem 4rem;
+    grid-template-columns: 1fr 1fr;
+
+    .skill {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      width: 12rem;
+      height: 12rem;
+      background-color: $brand_color_white;
+      transition: ease-in-out .5s;
+
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1) !important;
+        ;
+
+        i.icon-html {
+          color: #e34f26;
+        }
+
+        i.icon-css {
+          color: #0077b5;
+        }
+
+        i.icon-javascript {
+          color: #f7df1e;
+        }
+
+        i.icon-react {
+          color: #38b2ac;
+        }
+
+        i.icon-tailwindcss {
+          color: #61dafb;
+        }
+
+        i.icon-sass {
+          color: #cc6699;
+        }
+
+        i.icon-node-dot-js {
+          color: #339933;
+        }
+
+        i.icon-git {
+          color: #f05032;
+        }
+
+      }
+
+      i {
+        transform: scale(5);
+        transition: color .7s;
+        color: $brand_color_jet;
+      }
+    }
+  }
+}
+
+// #0077b5
+// #1572b6
