@@ -24,6 +24,10 @@
     p {
       @include paragraph-style;
       text-align: center;
+
+      span {
+        color: $brand_color_secondary;
+      }
     }
   }
 }
@@ -40,17 +44,30 @@
     .about-wrapper {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      gap: 5rem;
+      padding-inline: 2rem;
+
+      div {
+        width: 45%;
+
+        img {
+          width: 100%;
+        }
+      }
 
       .text {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        max-width: 60rem;
+        max-width: 61rem;
+        text-indent: 3rem;
       }
 
 
       p {
-        text-align: center;
+        text-align: start;
+        font-size: 2rem;
       }
     }
   }
