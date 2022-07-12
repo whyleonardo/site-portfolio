@@ -1,13 +1,13 @@
 @import '../styles/global.scss';
 
-
-
 #projects {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: clamp(2rem, 3rem, 4rem);
-  background: linear-gradient(300deg, rgba($brand_color_jet, 1) 0%, rgba($brand_color_black, 1) 70%);
+  background: linear-gradient(300deg,
+      rgba($brand_color_jet, 1) 0%,
+      rgba($brand_color_black, 1) 70%);
 
   .projects-wrapper {
     @include flex-wrapper;
@@ -18,7 +18,6 @@
     h2 {
       @include title-style;
     }
-
 
     .project-cards {
       display: flex;
@@ -32,7 +31,7 @@
         overflow: hidden;
         border-radius: 2rem;
         background-color: $brand_color_jet;
-        transition: .5s;
+        transition: 0.5s;
         width: 31rem;
         height: 19.5rem;
         cursor: pointer;
@@ -44,8 +43,7 @@
           border: 1px solid rgba($brand_color_jet, 1);
 
           p {
-            letter-spacing: .5rem;
-
+            letter-spacing: 0.5rem;
           }
         }
 
@@ -58,17 +56,33 @@
             color: $brand_color_white;
             text-transform: uppercase;
             text-align: center;
-            transition: .5s;
-
+            transition: 0.5s;
           }
         }
+      }
+    }
+
+    .project-spotify {
+      filter: brightness(1.2);
+      background-image: url('../assets/spotify-app.png');
+      background-size: cover;
+
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -50;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-color: rgba($brand_color_black, 0.5);
       }
     }
 
     .card.hidden {
       display: none;
     }
-
 
     .button-wrap {
       display: flex;
@@ -85,10 +99,9 @@
       }
     }
   }
-
 }
 
-// MEDIA QUERIES 
+// MEDIA QUERIES
 
 @media (min-width: 700px) {
   #projects {
@@ -122,7 +135,6 @@
 @media (min-width: 1200px) {
   #projects {
     .projects-wrapper {
-
       .project-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

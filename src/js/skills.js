@@ -12,22 +12,22 @@ let skillsInfo = [
   {
     title: 'html',
     name: 'HTML',
-    message: 'Linguagem de marcação'
+    message: 'Linguagem de marcação e estruração em uma página da web'
   },
   {
     title: 'css',
     name: 'CSS',
-    message: 'Linguagem de estilização'
+    message: 'Linguagem de estilização em uma página da web'
   },
   {
     title: 'js',
     name: 'Javascript',
-    message: 'Linguagem de programação'
+    message: 'Linguagem de programação voltada para o desenvolvimento web'
   },
   {
     title: 'react',
     name: 'ReactJS',
-    message: 'Biblioteca Javascript'
+    message: 'Biblioteca Javascript para criação de interfaces de usuário'
   },
   {
     title: 'tailwind',
@@ -37,17 +37,17 @@ let skillsInfo = [
   {
     title: 'sass',
     name: 'SASS',
-    message: 'Framework CSS'
+    message: 'Pré-processador CSS'
   },
   {
     title: 'node',
     name: 'NodeJS',
-    message: 'Ambiente de Desenvolvimento no Back End '
+    message: 'Ambiente de execução Javascript no server-side'
   },
   {
     title: 'git',
     name: 'GIT',
-    message: 'Ferramenta de Versionamento de código'
+    message: 'Ferramenta para Versionamento de códigos'
   }
 ]
 
